@@ -30,7 +30,7 @@ Resources:
       SecurityGroupIds: 
         - !Ref WebServerSecurityGroup
       Tags: 
-        - Key: Key
+        - Key: Name
           Value: WebServer-CodeRell
       UserData:
         Fn::Base64:
