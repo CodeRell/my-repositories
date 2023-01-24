@@ -1,7 +1,12 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: |
   CloudFormation template for roman numerals web app
-# Parameters:
+Parameters:
+
+   KeyPair:
+    Description: Key Pair for EC2 Instance
+    Type: AWS::EC2::KeyPair::KeyName
+
 Resources:
 
  WebServerSecurityGroup:
@@ -23,7 +28,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-0b5eea76982371e91
-      KeyName: CodeRell
+      KeyName: !Ref KeyName
       InstanceType: t2.micro
       SecurityGroupIds: 
         - !Ref WebServerSecurityGroup

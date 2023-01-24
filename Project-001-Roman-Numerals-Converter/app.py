@@ -23,7 +23,8 @@ def main_post():
             if not 0 < number < 4000:
                 return render_template('index.html', developer_name='CodeRell', not_valid=True)
             else:
-                roman_number = 'X'
+                roman_number = convert(number)
+            
                 return render_template('Result.html', number_decimal=number, number__roman=roman_number, developer_name='CodeRell')
             
         
