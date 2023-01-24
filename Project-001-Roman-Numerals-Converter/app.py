@@ -24,8 +24,7 @@ def main_post():
                 return render_template('index.html', developer_name='CodeRell', not_valid=True)
             else:
                 roman_number = convert(number)
-            
-                return render_template('Result.html', number_decimal=number, number__roman=roman_number, developer_name='CodeRell')
+                return render_template('result.html', number_decimal=number, number_roman=roman_number, developer_name='CodeRell')
             
         
             
